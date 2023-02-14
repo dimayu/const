@@ -2,55 +2,431 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>gulp-scss-starter</title>
-    <meta name="theme-color" content="#fff">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gulp-scss-starter</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-
-
-<!--
-    *********HEADER*******
--->
-
-<!--
-    *********MAIN*******
--->
+<!--HEADER-->
+<header class="header">
+  <div class="wrapper">
+    <div class="header__items">
+      <a href="#" class="header__items__logo">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <div class="header__items__item">
+        <div class="header__items__item--block">15 лет</div>
+        <div>безупречной репутации</div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--MAIN-->
 <main class="main">
-
+  <section class="section section-slider">
+    <div class="section-slider__item">
+      <div class="wrapper">
+        <div class="section-slider__content">
+          <div class="section-slider__content--block">
+            <h2><strong>«Спаси квартиру»</strong> - проект компании “Константа”, созданный
+              с целью помощи людям, попавшим в сложную финансовую ситуацию с целью сохранения жилья.</h2>
+          </div>
+          <div class="block-warn">Важно!!</div>
+          <h3>Если у вас есть недвижимость, находящаяся в залоге или приобретенная по ипотеке, то <strong>банкротство -
+            это не
+            выход</strong>, даже если это единственное жилье его все равно продадут с торгов.</h3>
+        </div>
+      </div>
+      <img src="img/slide.jpg" alt="slide" class="section-slider__img">
+    </div>
+    <div class="section-slider__item">
+      <div class="wrapper">
+        <div class="section-slider__content">
+          <div class="section-slider__content--block">
+            <h2><strong>«Спаси квартиру»</strong> - проект компании “Константа”, созданный
+              с целью помощи людям, попавшим в сложную финансовую ситуацию с целью сохранения жилья.</h2>
+          </div>
+          <div class="block-warn">Важно!!</div>
+          <h3>Если у вас есть недвижимость, находящаяся в залоге или приобретенная по ипотеке, то <strong>банкротство -
+            это не
+            выход</strong>, даже если это единственное жилье его все равно продадут с торгов.</h3>
+        </div>
+      </div>
+      <img src="img/slide.jpg" alt="slide" class="section-slider__img">
+    </div>
+    <div class="section-slider__item">
+      <div class="wrapper">
+        <div class="section-slider__content">
+          <div class="section-slider__content--block">
+            <h2><strong>«Спаси квартиру»</strong> - проект компании “Константа”, созданный
+              с целью помощи людям, попавшим в сложную финансовую ситуацию с целью сохранения жилья.</h2>
+          </div>
+          <div class="block-warn">Важно!!</div>
+          <h3>Если у вас есть недвижимость, находящаяся в залоге или приобретенная по ипотеке, то <strong>банкротство -
+            это не
+            выход</strong>, даже если это единственное жилье его все равно продадут с торгов.</h3>
+        </div>
+      </div>
+      <img src="img/slide.jpg" alt="slide" class="section-slider__img">
+    </div>
+    <div class="section-slider__item">
+      <div class="wrapper">
+        <div class="section-slider__content">
+          <div class="section-slider__content--block">
+            <h2><strong>«Спаси квартиру»</strong> - проект компании “Константа”, созданный
+              с целью помощи людям, попавшим в сложную финансовую ситуацию с целью сохранения жилья.</h2>
+          </div>
+          <div class="block-warn">Важно!!</div>
+          <h3>Если у вас есть недвижимость, находящаяся в залоге или приобретенная по ипотеке, то <strong>банкротство -
+            это не
+            выход</strong>, даже если это единственное жилье его все равно продадут с торгов.</h3>
+        </div>
+      </div>
+      <img src="img/slide.jpg" alt="slide" class="section-slider__img">
+    </div>
+  </section>
+  <section class="section section-help">
+    <div class="wrapper">
+      <div class="section-inner">
+        <h2 class="section__title">Мы поможем, если:</h2>
+        <div class="section-help__items">
+          <div class="section-help__items__item trigger">
+            <img src="img/help/pic-1.png" alt="pic" width="77.84px" height="77.84px">
+            <p>Ваша квартира финансовой компании
+              (в т.ч. через куплю-продажу)</p>
+          </div>
+          <div class="section-help__items__item trigger">
+            <img src="img/help/pic-2.png" alt="pic" width="77.84px" height="77.84px">
+            <p>Ваша квартира выставлена на торги</p>
+          </div>
+          <div class="section-help__items__item trigger">
+            <img src="img/help/pic-3.png" alt="pic" width="77.84px" height="77.84px">
+            <p>Вам нужно уменьшить платеж
+              по кредиту</p>
+          </div>
+          <div class="section-help__items__item trigger">
+            <img src="img/help/pic-4.png" alt="pic" width="77.84px" height="77.84px">
+            <p>Вам грозит процедура
+              банкротства</p>
+          </div>
+          <div class="section-help__items__item trigger">
+            <img src="img/help/pic-5.png" alt="pic" width="77.84px" height="77.84px">
+            <p>Разводитесь или делите квартиру,
+              в которой живете.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </section>
+  <section class="section section-form">
+    <div class="wrapper">
+      <h2 class="section__title">Отправить заявку:</h2>
+      <form action="" method="post" class="section-form__form">
+        <div class="section-form__form--input">
+          <p>Сумма долга</p>
+          <div class="block-input">
+            <input type="text" name="" placeholder="2 000 0000" class="input">
+            <div class="block-input__after">₽</div>
+          </div>
+        </div>
+        <div class="section-form__form--input">
+          <p>Ежемесячный платёж</p>
+          <div class="block-input">
+            <input type="text" name="" placeholder="15 000" class="input">
+            <div class="block-input__after">₽</div>
+          </div>
+        </div>
+        <div class="section-form__form--input">
+          <p>Адрес объекта</p>
+          <div class="block-input">
+            <input type="text" name="" placeholder="2 000 0000" class="input input-address">
+            <div class="block-input__after">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#map"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <button class="btn">ОТПРАВИТЬ</button>
+      </form>
+    </div>
+  </section>
+  <section class="section section-warning">
+    <div class="wrapper">
+      <div class="section-warning__items">
+        <div class="section-warning__items__item section-warning__items__item--pic">
+          <img src="img/img-1.jpg" alt="pic" width="315.33px" height="468.23px">
+        </div>
+        <div class="section-warning__items__item section-warning__items__item--text">
+          <p><strong>«Спасение квартиры»</strong> - это сложный бизнес-процесс, занимающий примерно месяц слаженной
+            командной работы
+            нескольких специалистов.</p>
+          <p>Сложность этого процесса зачастую связанна со снятием запретов ФССП
+            и судебных арестов, ведением переговоров с «недобросовестными кредиторами» или участием в торгах и т.д.
+            Конечным результатом нашей работы будет выдача ипотечного кредита (не смотря на вашу кред. историю) и
+            сохранение квартиры в вашей собственности.
+          </p>
+          <ul>
+            <li>Мы проводим межрегиональные сделки на территории всей Российской Федерации</li>
+            <li>Сделки проходят дистанционно, с помощью электронного документа оборота
+              и не требуют личного присутствия клиента.
+            </li>
+            <li>Для начала работы вам необходимо отправить заявку, в которой необходимо
+              указать ваш телефон и адрес квартиры.
+            </li>
+          </ul>
+          <div class="block-warn">Важно!!</div>
+          <p>Единственное за чем вам придётся строго следить после «Спасения квартиры» <strong>это
+            своевременное</strong> <b>внесение платежей</b> по ипотеке
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-about">
+    <div class="wrapper">
+      <div class="section-inner">
+        <div class="section-about__items">
+          <div class="section-about__items__item section-about__items__item--text">
+            <h2 class="section__title">О нас</h2>
+            <p>17 лет наша компания работает, в сфере ипотечного кредитования.
+              Наша безупречная репутация регулярно подтверждается положительными
+              отзывами наших клиентов и благодарственными письмами от наших партнеров.</p>
+            <p>Если мы беремся за работу – она будет выполнена. </p>
+            <div class="block-warn">Важно!!</div>
+            <p>Мы не берем предоплату, наша комиссия <strong>оплачивается только по факту</strong> выполнения работы.</p>
+          </div>
+          <div class="section-about__items__item section-about__items__item--pic">
+            <img src="img/img-2.jpg" alt="pic" width="269.56px" height="311.22px">
+          </div>
+        </div>
+        <div class="partners-logo">
+          <h3 class="section__title">Банки партнеры:</h3>
+          <div class="partners-logo__items">
+            <img src="img/logo-1.png" alt="logo">
+            <img src="img/logo-2.png" alt="logo">
+            <img src="img/logo-3.png" alt="logo">
+            <img src="img/logo-4.png" alt="logo">
+            <img src="img/logo-5.png" alt="logo">
+          </div>
+        </div>
+        <div class="reviews">
+          <h3 class="section__title">Отзывы:</h3>
+          <div class="reviews-slider">
+            <div class="reviews__items">
+              <img src="img/slide-1.png" alt="logo" class="reviews__items__pic">
+              <div class="reviews__items__text">
+                <div class="reviews__items__text--stars">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                </div>
+                <div class="reviews__items__text--name">
+                  Константин Константинопольский
+                </div>
+                <p>г. Новороссийск</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="reviews__items__text--ava">
+                  <img src="img/ava.png" alt="ava" width="112.75px" height="112.75px">
+                </div>
+              </div>
+            </div>
+            <div class="reviews__items">
+              <img src="img/slide-1.png" alt="logo" class="reviews__items__pic">
+              <div class="reviews__items__text">
+                <div class="reviews__items__text--stars">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#star"></use>
+                  </svg>
+                </div>
+                <div class="reviews__items__text--name">
+                  Константин Константинопольский
+                </div>
+                <p>г. Новороссийск</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="reviews__items__text--ava">
+                  <img src="img/ava.png" alt="ava" width="112.75px" height="112.75px">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg"></div>
+        <div class="bg-1"></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-form">
+    <div class="wrapper">
+      <h2 class="section__title">Отправить заявку:</h2>
+      <form action="" method="post" class="section-form__form">
+        <div class="section-form__form--input">
+          <p>Сумма долга</p>
+          <div class="block-input">
+            <input type="text" name="" placeholder="2 000 0000" class="input">
+            <div class="block-input__after">₽</div>
+          </div>
+        </div>
+        <div class="section-form__form--input">
+          <p>Ежемесячный платёж</p>
+          <div class="block-input">
+            <input type="text" name="" placeholder="15 000" class="input">
+            <div class="block-input__after">₽</div>
+          </div>
+        </div>
+        <div class="section-form__form--input">
+          <p>Адрес объекта</p>
+          <div class="block-input">
+            <input type="text" name="" placeholder="2 000 0000" class="input input-address">
+            <div class="block-input__after">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#map"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <button class="btn">ОТПРАВИТЬ</button>
+      </form>
+    </div>
+  </section>
+  <section class="section section-contacts">
+    <div class="wrapper">
+      <div class="section-contacts__text">
+          <svg class="logo">
+            <use xlink:href="img/sprites/sprite.svg#logo"></use>
+          </svg>
+          <a href="tel:+7 952 646-00-60" class="section-contacts__text__item">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#phone"></use>
+            </svg>
+            <span>+7 952 646-00-60</span>
+          </a>
+        <div class="section-contacts__text__item">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#map"></use>
+          </svg>
+          <span>г.Пермь, ул.Механизаторов 34,<br>офис 12</span>
+        </div>
+        <p>Схема проезда</p>
+      </div>
+    </div>
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3Af86b74d7b2b2f760255d21b83dd0799673014124b96e7ec9bf5a1a9de871fabb&amp;source=constructor"
+      width="100%" height="100%" frameborder="0"
+    class="map"></iframe>
+  </section>
 </main>
 
-<footer>
-
+<footer class="footer">
+  <div class="wrapper">
+    <div class="footer__items">
+      <img src="img/yandex.png" alt="yandex" width="173.88px" height="48.24px">
+      <p class="link">Создание сайта <a href="#https://webzion.ru/" target="_blank">WebZion</a></p>
+      <p>Все права защищены.</p>
+    </div>
+  </div>
 </footer>
 
+<div class="modal-wrapper">
+  <div class="modal">
+    <div class="head">
+      <div class="btn-close trigger"></div>
+    </div>
+    <div class="content">
+      <h2 class="section__title">Отправить заявку</h2>
+      <form action="" method="post" class="section-form__form">
+        <div class="section-form__form--input">
+          <p>Сумма долга</p>
+          <div class="block-input">
+            <input type="text" name="" placeholder="2 000 0000" class="input">
+            <div class="block-input__after">₽</div>
+          </div>
+        </div>
+        <div class="section-form__form--input">
+          <p>Ежемесячный платёж</p>
+          <div class="block-input">
+            <input type="text" name="" placeholder="15 000" class="input">
+            <div class="block-input__after">₽</div>
+          </div>
+        </div>
+        <div class="section-form__form--input">
+          <p>Адрес объекта</p>
+          <div class="block-input">
+            <input type="text" name="" placeholder="2 000 0000" class="input input-address">
+            <div class="block-input__after">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#map"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <button class="btn">ОТПРАВИТЬ</button>
+      </form>
+    </div>
+  </div>
+</div>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 

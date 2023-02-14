@@ -6,12 +6,16 @@ let settings = {
     offset: '16px',
     mobileFirst: false,
     container: {
-        maxWidth: '1170px',
-        fields: '135px'
+        maxWidth: '1110px',
+        fields: '405px'
     },
     breakPoints: {
         lm: {
-            width: '1280px',
+            width: '1650px',
+            fields: '50px'
+        },
+        xlm: {
+            width: '1240px',
             fields: '50px'
         },
         md: {
