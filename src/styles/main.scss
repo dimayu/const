@@ -77,11 +77,27 @@ button {
 .header {
   padding: 24px 0;
 
+  @include md-block() {
+    padding: 12px 0;
+  }
+
   &__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: $offset;
+
+    @include md-block() {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-left: 0;
+
+      &__logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+    }
 
     &__logo {
       svg {
@@ -97,6 +113,10 @@ button {
       font-size: 20px;
       padding-right: 14px;
 
+      @include md-block() {
+        text-align: center;
+      }
+
       &--block {
         font-weight: 500;
         font-size: 30px;
@@ -104,6 +124,10 @@ button {
         background-color: $color-red;
         margin: 6px;
         padding: 0 8px;
+
+        @include md-block() {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -117,6 +141,11 @@ button {
     left: 17%;
     display: flex;
     justify-content: center;
+
+    @include md-block() {
+      bottom: 5px;
+      left: 0;
+    }
 
     li {
       width: 11px;
@@ -139,6 +168,18 @@ button {
   &__item.slick-slide {
     display: flex;
     position: relative;
+
+    img {
+      height: 100%;
+      width: auto;
+      @include xlm-block() {
+        height: auto;
+      }
+
+      @include md-block() {
+        display: none;
+      }
+    }
   }
 
   &__content {
@@ -149,18 +190,36 @@ button {
     z-index: 2;
     background: linear-gradient(-75deg, transparent 15%, #fff 0);
 
+    @include md-block() {
+      width: 100%;
+      padding: 24px 0;
+    }
+
     &--block {
       padding: 30px 106px 30px 56px;
       background: linear-gradient(-75deg, transparent 15%, rgba(217, 217, 217, 0.22) 0);
+
+      @include md-block() {
+        padding: 12px;
+        background: rgba(217, 217, 217, 0.22);
+      }
     }
 
     .block-warn {
       margin: 52px 0 22px $offset;
+
+      @include md-block() {
+        margin: 24px 0;
+      }
     }
 
     h3 {
       margin-right: 24%;
       margin-left: $offset;
+
+      @include md-block() {
+        margin: 0;
+      }
     }
   }
 
@@ -174,6 +233,14 @@ button {
 .section-help {
   background-color: #E8E8E8;
   padding: 80px 0 112px;
+
+  @include md-block() {
+    padding: 32px 0;
+
+    .bg {
+      display: none;
+    }
+  }
 
   .bg {
     position: relative;
@@ -206,6 +273,10 @@ button {
     padding: 51px $offset 33px;
     position: relative;
     z-index: 2;
+
+    @include md-block() {
+      padding: 24px;
+    }
   }
 
   &__items {
@@ -213,6 +284,18 @@ button {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 54px;
+
+    @include md-block() {
+      margin-top: 24px;
+
+      &__item {
+        width: 100%;
+
+        p {
+          margin-left: 24px;
+        }
+      }
+    }
 
     &__item {
       width: 45%;
@@ -289,8 +372,16 @@ button {
   color: #fff;
   padding: 50px 0 33px;
 
+  @include md-block() {
+    padding: 24px 0;
+  }
+
   .section__title {
     margin-left: $offset;
+
+    @include md-block() {
+      margin-left: 0;
+    }
   }
 
   &__form {
@@ -300,6 +391,10 @@ button {
     margin-top: 28px;
     margin-left: $offset;
 
+    @include md-block() {
+      margin-left: 0;
+    }
+
     p {
       margin-bottom: 14px;
       font-size: 18px;
@@ -307,6 +402,16 @@ button {
 
     &--input, .btn {
       width: 28%;
+
+      @include sm-block() {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @include xxs-block() {
+        width: 100%;
+      }
     }
 
     .btn {
@@ -318,6 +423,14 @@ button {
 .section-warning {
   padding: 80px 0 65px;
 
+  @include md-block() {
+    padding: 24px 0;
+
+    &__items {
+      flex-wrap: wrap;
+    }
+  }
+
   &__items {
     display: flex;
     gap: 24px;
@@ -327,6 +440,19 @@ button {
         width: 33%;
         position: relative;
         z-index: 1;
+
+        @include md-block() {
+          width: 28%;
+          position: static;
+
+          img {
+            margin-top: 0;
+          }
+        }
+
+        @include sm-block() {
+          display: none;
+        }
 
         &::before {
           content: '';
@@ -357,6 +483,10 @@ button {
 
       &--text {
         width: 67%;
+
+        @include sm-block() {
+          width: 100%;
+        }
 
         p {
           margin-bottom: 30px;
@@ -404,12 +534,20 @@ button {
   padding: 80px 0 105px;
   z-index: 1;
 
+  @include md-block() {
+    padding: 24px 0;
+  }
+
   .bg {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+
+    @include md-block() {
+      display: none;
+    }
 
     &::before {
       content: '';
@@ -440,12 +578,20 @@ button {
     height: 341.74px;
     background: #D7D7D7;
     z-index: -1;
+
+    @include md-block() {
+      display: none;
+    }
   }
 
   .section-inner {
     position: relative;
     background-color: #fff;
     padding: 58px 58px 100px;
+
+    @include md-block() {
+      padding: 24px;
+    }
   }
 
   .section__title {
@@ -461,6 +607,10 @@ button {
       &--text {
         width: 70%;
 
+        @include sm-block() {
+          width: 100%;
+        }
+
         p {
           padding-bottom: 20px;
         }
@@ -472,6 +622,10 @@ button {
 
       &--pic {
         width: 30%;
+
+        @include sm-block() {
+          display: none;
+        }
       }
     }
   }
@@ -483,6 +637,12 @@ button {
     gap: 40px;
     align-items: center;
     margin-bottom: 80px;
+
+    @include xlm-block() {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
   }
 }
 
@@ -520,11 +680,21 @@ button {
     background-color: #F0F0F0;
     border-radius: 6px;
     padding: 51px 68px 40px;
+
+    @include md-block() {
+      padding: 24px;
+    }
   }
 
   &__items.slick-slide {
     display: flex;
     align-items: flex-start;
+
+    img.reviews__items__pic {
+      @include sm-block() {
+        display: none;
+      }
+    }
   }
 
   &__items {
@@ -533,6 +703,10 @@ button {
       margin-left: 34px;
       font-family: 'Ubuntu', sans-serif;
       color: #2E2E36;
+
+      @include sm-block() {
+        margin-left: 0;
+      }
 
       &--stars {
         display: flex;
@@ -557,6 +731,10 @@ button {
         position: absolute;
         right: 0;
         top: 0;
+
+        @include xxs-block() {
+          display: none;
+        }
       }
     }
   }
@@ -568,11 +746,21 @@ button {
   box-sizing: border-box;
   padding: 5% 0;
 
+  @include md-block() {
+    height: auto;
+    background-color: #E8E8E8;
+    padding: 24px;
+  }
+
   .map {
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
+
+    @include sm-block() {
+      display: none;
+    }
   }
 
   &__text {
@@ -581,6 +769,25 @@ button {
     padding: 60px 120px 50px 64px;
     color: #000;
     font-size: 21px;
+
+    @include md-block() {
+      width: auto;
+      background-color: #E8E8E8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+
+      .logo {
+        margin-bottom: 24px;
+      }
+
+      &__item {
+        align-items: flex-start;
+      }
+    }
 
     .logo {
       width: 237px;
@@ -625,6 +832,15 @@ button {
     padding: 16px 0;
     font-size: 18px;
     color: #5E5E5E;
+
+    @include sm-block() {
+      flex-direction: column;
+      justify-content: center;
+
+      .link {
+        margin: 12px 0;
+      }
+    }
   }
 
   .link {
@@ -669,6 +885,10 @@ button {
   background: #494949;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+
+  @include sm-block() {
+    max-width: 300px;
+  }
 }
 
 .modal-wrapper.open .modal {
@@ -682,8 +902,21 @@ button {
       margin: 0;
     }
 
+    @include sm-block() {
+      margin-bottom: 12px;
+
+      .section-form__form p {
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
+    }
+
     .section__title {
       text-align: center;
+
+      @include sm-block() {
+        font-size: 18px;
+      }
     }
 
     .section-form__form--input, .section-form__form .btn {
